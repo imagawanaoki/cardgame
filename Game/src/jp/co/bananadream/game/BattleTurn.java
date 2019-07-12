@@ -1,7 +1,5 @@
 package jp.co.bananadream.game;
 
-import java.util.Random;
-
 /**
  *バトルのターン処理
  * @author n_imagawa
@@ -30,13 +28,18 @@ public class BattleTurn {
 			//モンスターのターン
 			System.out.println(OffenceMonster.getName() + "の攻撃！！");
 
-			//攻撃をかわした場合
-			Random rand = new Random();
-			int num = rand.nextInt(3);
 
-			if (num == 1) {
+
+			//攻撃をかわした場合
+
+			DeffenceMonster.isHit();
+
+			if (DeffenceMonster.isHit()) {
+
 				System.out.println(DeffenceMonster.getName() + "はひらりと攻撃をかわした");
+
 			}else {
+
 				System.out.println(DeffenceMonster.getName() + "は"
 						+ DeffenceMonster.Defense(OffenceMonster.Attack(DeffenceMonster.getType())) + "のダメージを受けた");
 
