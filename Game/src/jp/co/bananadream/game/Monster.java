@@ -85,14 +85,27 @@ public abstract class Monster implements CardGame {
 	 */
 
 	public boolean isHit() {
+
+		Monster[] monster = new Monster[2];
+		Monster mon = monster[0];
+		int num = 0;
+
 		Random rand = new Random();
-		int num = rand.nextInt(3);
-		if (num == 1) {
-			System.out.println();
-			return false;
-		}
-		return true;
+
+			if(mon.getQuickly() > 10) {
+				 num = rand.nextInt(5);
+
+			}else if (mon.getQuickly() > 20) {
+				num = rand.nextInt(3);
+
+			}
+			if (num == 1) {
+				return false;
+			}
+			return true;
 	}
+
+
 
 	/**
 	 * 生存判定
