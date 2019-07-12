@@ -77,20 +77,21 @@ public class Battle {
 					Monster tmp = monster[1];
 					monster[1] = monster[0];
 					monster[0] = tmp;
+				}
 
-					//乱数で時々先行が変わる処理
-					Random rand = new Random();
-					int num = rand.nextInt(3) ;
-					if (num == 1) {
-						tmp = monster[1];
-						monster[1] = monster[0];
-						monster[0] = tmp;
+						//乱数で時々先行が変わる処理
+						Random rand = new Random();
+						int num = rand.nextInt(3) ;
+						if (num == 1) {
+							Monster tmp = monster[1];
+							monster[1] = monster[0];
+							monster[0] = tmp;
 
-					} else {
+
 					}
 				}
 			}
-		}
+
 		return;
 	}
 }
