@@ -72,6 +72,9 @@ public abstract class Monster implements CardGame {
 	 */
 	public int Defense(int offensivePower) {
 		int damage = offensivePower - getDefense();
+		if(damage < 0) {
+			damage = 0;
+		}
 		hp =  getHp() - damage ;
 		return damage;
 		}

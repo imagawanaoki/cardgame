@@ -17,6 +17,7 @@ public class BattleTurn {
 
 		//ターン処理
 		while (true) {
+
 			//roop回数が偶数か奇数か
 			if (roop % 2 == 0) {
 				OffenceMonster = monster[0];
