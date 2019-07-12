@@ -34,7 +34,7 @@ public class BattleTurn {
 
 			DeffenceMonster.isHit();
 
-			if (DeffenceMonster.isHit()) {
+			if (!DeffenceMonster.isHit()) {
 
 				System.out.println(DeffenceMonster.getName() + "はひらりと攻撃をかわした");
 
