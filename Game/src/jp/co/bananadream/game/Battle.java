@@ -91,5 +91,3 @@ public class Battle {
 	}
 }
 
-//
-//&& monster[1].getOffense() > monster[0].getOffense()
