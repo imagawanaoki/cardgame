@@ -71,26 +71,21 @@ public class Battle {
 	private static void judgeOrder(Monster[] monster) throws IOException {
 
 		//先行決めの判定 素早さ順、入れ替えの処理
+
+		Random rand = new Random();
+		int num = rand.nextInt(3);
+
 		for (int i = 0; i < monster.length - 1; i++) {
 			for (int j = i + 1; j < monster.length; j++) {
-				if (monster[1].getQuickly() > monster[0].getQuickly()) {
-					Monster tmp = monster[1];
-					monster[1] = monster[0];
-					monster[0] = tmp;
-				}
-
-						//乱数で時々先行が変わる処理
-						Random rand = new Random();
-						int num = rand.nextInt(3) ;
-						if (num == 1) {
-							Monster tmp = monster[1];
-							monster[1] = monster[0];
-							monster[0] = tmp;
-
-
+				if (num != 1) {
+					if (monster[1].getQuickly() > monster[0].getQuickly()) {
+						Monster tmp = monster[1];
+						monster[1] = monster[0];
+						monster[0] = tmp;
 					}
 				}
 			}
+		}
 
 		return;
 	}
